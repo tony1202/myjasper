@@ -1,0 +1,5 @@
+1.一般都是使用net.sf.jasperreports.engine.data.JRBeanCollectionDataSource类型参数来作为表格的数据源，然后将javabean集合放入这个参数中。
+  Javabean的属性就对应着table组件中的字段。在生产PDF模板时，就可以传入一个空的JREmptyDataSource，从而通过不同参数来实现多数据源。
+
+2.在使用table组件和其他组件混合使用时，需要设置组件的位置为float属性。防止table自增行时，导致覆盖问题。
+3.中文显示问题，需要自定义包。将中文fonts.xml以及对应的字体放入然后重新打jar包。具体见jasperfonts模块
